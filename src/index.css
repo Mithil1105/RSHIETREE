@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Nature-inspired color palette */
+    --background: 45 30% 97%;
+    --foreground: 150 20% 15%;
+
+    --card: 45 40% 98%;
+    --card-foreground: 150 20% 15%;
+
+    --popover: 45 40% 98%;
+    --popover-foreground: 150 20% 15%;
+
+    /* Forest green primary */
+    --primary: 152 45% 32%;
+    --primary-foreground: 45 30% 97%;
+
+    /* Warm earth secondary */
+    --secondary: 35 35% 88%;
+    --secondary-foreground: 150 20% 15%;
+
+    --muted: 45 20% 92%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Soft sage accent */
+    --accent: 145 30% 85%;
+    --accent-foreground: 150 20% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 152 45% 32%;
+
+    --radius: 1rem;
+
+    /* Custom nature tokens */
+    --forest: 152 45% 32%;
+    --forest-light: 152 35% 45%;
+    --forest-dark: 152 50% 22%;
+    --earth: 30 35% 45%;
+    --earth-light: 35 40% 75%;
+    --cream: 45 40% 96%;
+    --sage: 145 25% 75%;
+    --moss: 140 30% 40%;
+    --bark: 25 30% 30%;
+
+    /* Gradients */
+    --gradient-nature: linear-gradient(135deg, hsl(152 45% 32%) 0%, hsl(145 35% 45%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(35 35% 88%) 0%, hsl(45 40% 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(45 40% 99%) 0%, hsl(45 30% 95%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(45 30% 97%) 0%, hsl(145 25% 92%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(150 20% 15% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(150 20% 15% / 0.12);
+    --shadow-elevated: 0 16px 50px -12px hsl(150 20% 15% / 0.18);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 150 18% 12%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 150 18% 12%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 152 40% 50%;
+    --primary-foreground: 150 20% 8%;
+
+    --secondary: 150 15% 20%;
+    --secondary-foreground: 45 30% 95%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 45 15% 65%;
+
+    --accent: 145 25% 25%;
+    --accent-foreground: 45 30% 95%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 152 40% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-nature);
+  }
+
+  .bg-gradient-nature {
+    background-image: var(--gradient-nature);
+  }
+
+  .bg-gradient-earth {
+    background-image: var(--gradient-earth);
+  }
+
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
