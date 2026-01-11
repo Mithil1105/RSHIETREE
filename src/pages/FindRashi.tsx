@@ -25,19 +25,9 @@ import { computeRashi } from '@/lib/api';
 import { getRashiByKey } from '@/lib/data';
 import { useLanguage, GUJARAT_CITIES, CITY_KEYS } from '@/contexts/LanguageContext';
 
-const MONTHS = [
-  { value: '01', label: 'January' },
-  { value: '02', label: 'February' },
-  { value: '03', label: 'March' },
-  { value: '04', label: 'April' },
-  { value: '05', label: 'May' },
-  { value: '06', label: 'June' },
-  { value: '07', label: 'July' },
-  { value: '08', label: 'August' },
-  { value: '09', label: 'September' },
-  { value: '10', label: 'October' },
-  { value: '11', label: 'November' },
-  { value: '12', label: 'December' },
+const MONTH_KEYS = [
+  'january', 'february', 'march', 'april', 'may', 'june',
+  'july', 'august', 'september', 'october', 'november', 'december'
 ];
 
 const formSchema = z.object({
@@ -356,7 +346,7 @@ export default function FindRashi() {
         >
           <Card variant="nature">
             <CardHeader>
-              <CardTitle className="text-xl">Birth Details</CardTitle>
+              <CardTitle className="text-xl">{t('findRashi.birthDetails')}</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -364,18 +354,18 @@ export default function FindRashi() {
                 <div className="space-y-3">
                   <Label className="flex items-center gap-2 text-base font-medium">
                     <Calendar className="w-5 h-5 text-primary" />
-                    Date of Birth *
+                    {t('findRashi.dob')}
                   </Label>
                   
                   <div className="grid grid-cols-3 gap-3">
                     {/* Day */}
                     <div className="space-y-1">
-                      <Label className="text-xs text-muted-foreground">Day</Label>
+                      <Label className="text-xs text-muted-foreground">{t('findRashi.day')}</Label>
                       <Input
                         ref={dayRef}
                         type="text"
                         inputMode="none"
-                        placeholder="DD"
+                        placeholder={t('findRashi.dayPlaceholder')}
                         maxLength={2}
                         className={`text-center text-lg h-14 touch-manipulation ${activeField === 'day' ? 'ring-2 ring-primary' : ''}`}
                         {...register('birth_day')}
@@ -389,7 +379,7 @@ export default function FindRashi() {
 
                     {/* Month Dropdown */}
                     <div className="space-y-1">
-                      <Label className="text-xs text-muted-foreground">Month</Label>
+                      <Label className="text-xs text-muted-foreground">{t('findRashi.month')}</Label>
                       <Controller
                         name="birth_month"
                         control={control}
@@ -402,16 +392,16 @@ export default function FindRashi() {
                             value={field.value}
                           >
                             <SelectTrigger className="h-14 text-base touch-manipulation">
-                              <SelectValue placeholder="Month" />
+                              <SelectValue placeholder={t('findRashi.monthPlaceholder')} />
                             </SelectTrigger>
                             <SelectContent className="max-h-60">
-                              {MONTHS.map((month) => (
+                              {MONTH_KEYS.map((monthKey, index) => (
                                 <SelectItem 
-                                  key={month.value} 
-                                  value={month.value}
+                                  key={monthKey} 
+                                  value={(index + 1).toString().padStart(2, '0')}
                                   className="text-base py-3 touch-manipulation"
                                 >
-                                  {month.label}
+                                  {t(`month.${monthKey}`)}
                                 </SelectItem>
                               ))}
                             </SelectContent>
@@ -425,12 +415,12 @@ export default function FindRashi() {
 
                     {/* Year */}
                     <div className="space-y-1">
-                      <Label className="text-xs text-muted-foreground">Year</Label>
+                      <Label className="text-xs text-muted-foreground">{t('findRashi.year')}</Label>
                       <Input
                         ref={yearRef}
                         type="text"
                         inputMode="none"
-                        placeholder="YYYY"
+                        placeholder={t('findRashi.yearPlaceholder')}
                         maxLength={4}
                         className={`text-center text-lg h-14 touch-manipulation ${activeField === 'year' ? 'ring-2 ring-primary' : ''}`}
                         {...register('birth_year')}
@@ -458,18 +448,18 @@ export default function FindRashi() {
                 <div className="space-y-3">
                   <Label className="flex items-center gap-2 text-base font-medium">
                     <Clock className="w-5 h-5 text-primary" />
-                    Time of Birth (optional)
+                    {t('findRashi.tob')}
                   </Label>
                   
                   <div className="grid grid-cols-3 gap-3">
                     {/* Hour */}
                     <div className="space-y-1">
-                      <Label className="text-xs text-muted-foreground">Hour (1-12)</Label>
+                      <Label className="text-xs text-muted-foreground">{t('findRashi.hour')}</Label>
                       <Input
                         ref={hourRef}
                         type="text"
                         inputMode="none"
-                        placeholder="HH"
+                        placeholder={t('findRashi.hourPlaceholder')}
                         maxLength={2}
                         className={`text-center text-lg h-14 touch-manipulation ${activeField === 'hour' ? 'ring-2 ring-primary' : ''}`}
                         {...register('time_hour')}
@@ -480,12 +470,12 @@ export default function FindRashi() {
 
                     {/* Minute */}
                     <div className="space-y-1">
-                      <Label className="text-xs text-muted-foreground">Minute (0-59)</Label>
+                      <Label className="text-xs text-muted-foreground">{t('findRashi.minute')}</Label>
                       <Input
                         ref={minuteRef}
                         type="text"
                         inputMode="none"
-                        placeholder="MM"
+                        placeholder={t('findRashi.minutePlaceholder')}
                         maxLength={2}
                         className={`text-center text-lg h-14 touch-manipulation ${activeField === 'minute' ? 'ring-2 ring-primary' : ''}`}
                         {...register('time_minute')}
@@ -496,7 +486,7 @@ export default function FindRashi() {
 
                     {/* AM/PM Toggle */}
                     <div className="space-y-1">
-                      <Label className="text-xs text-muted-foreground">AM/PM</Label>
+                      <Label className="text-xs text-muted-foreground">{t('findRashi.ampm')}</Label>
                       <Controller
                         name="time_ampm"
                         control={control}
@@ -514,7 +504,7 @@ export default function FindRashi() {
                                 setActiveField(null);
                               }}
                             >
-                              AM
+                              {t('findRashi.am')}
                             </button>
                             <button
                               type="button"
@@ -528,7 +518,7 @@ export default function FindRashi() {
                                 setActiveField(null);
                               }}
                             >
-                              PM
+                              {t('findRashi.pm')}
                             </button>
                           </div>
                         )}
@@ -547,7 +537,7 @@ export default function FindRashi() {
                   )}
 
                   <p className="text-xs text-muted-foreground">
-                    Enter time in 12-hour format. Leave empty if unknown.
+                    {t('findRashi.timeHelper')}
                   </p>
                 </div>
 
@@ -629,7 +619,7 @@ export default function FindRashi() {
                 {/* Manual Coordinates Toggle */}
                 <div className="flex items-center justify-between py-4 px-4 rounded-lg bg-accent/30 border border-border/50 touch-manipulation">
                   <Label htmlFor="manual-coords" className="text-base cursor-pointer">
-                    Enter coordinates manually
+                    {t('findRashi.manualCoords')}
                   </Label>
                   <Switch
                     id="manual-coords"
@@ -840,8 +830,7 @@ export default function FindRashi() {
                 <div className="flex items-start gap-3 p-4 rounded-lg bg-accent/30 border border-primary/10">
                   <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <p className="text-sm text-muted-foreground">
-                    If birth time is approximate or unknown, results may vary. 
-                    The Moon changes signs approximately every 2.5 days.
+                    {t('findRashi.infoNote')}
                   </p>
                 </div>
 

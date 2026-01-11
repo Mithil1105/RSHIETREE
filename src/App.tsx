@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import Home from "./pages/Home";
 import KnowRashi from "./pages/KnowRashi";
 import FindRashi from "./pages/FindRashi";
@@ -22,6 +23,7 @@ function App() {
           <Toaster />
           <Sonner position="top-center" />
           <BrowserRouter>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/know-rashi" element={<KnowRashi />} />
