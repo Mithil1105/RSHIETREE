@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { TreeDeciduous, Moon, ArrowRight, Leaf } from 'lucide-react';
 import { Layout } from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
@@ -41,6 +42,19 @@ const TreeSilhouette = ({ className }: { className?: string }) => (
 
 export default function Home() {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if user is returning from nursery site and should be redirected
+    const navTimestamp = sessionStorage.getItem('nurseryNavTimestamp');
+    if (navTimestamp) {
+      const timeElapsed = Date.now() - parseInt(navTimestamp, 10);
+      // If more than 1 minute has passed, clear the timestamp
+      if (timeElapsed >= 60000) {
+        sessionStorage.removeItem('nurseryNavTimestamp');
+      }
+    }
+  }, [navigate]);
 
   return (
     <Layout>

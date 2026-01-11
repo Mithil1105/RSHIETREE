@@ -585,6 +585,283 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Timer
     'timer.inactive': 'Session expires in',
+
+    // Nursery Redirect
+    'nursery.redirecting': 'Redirecting in',
+    'nursery.seconds': 'seconds',
+    'nursery.errorMessage': 'The nursery map cannot be displayed here due to security restrictions. Click below to open it in this tab.',
+    'nursery.secondsUntilRedirect': 'seconds until auto-redirect to home',
+    'nursery.openMap': 'Open Nursery Map',
+    'nursery.returnHome': 'Return to Home',
+    'nursery.loading': 'Loading nursery map...',
+
+    // NotFound
+    'notFound.title': 'Page Not Found',
+    'notFound.message': 'The path you\'re looking for doesn\'t exist. Let\'s get you back to discovering your sacred trees.',
+    'notFound.returnHome': 'Return Home',
+
+    // Loading
+    'loading.discovering': 'Discovering your trees...',
+    'loading.calculating': 'Calculating your Moon sign...',
+
+    // Error
+    'error.title': 'Something went wrong',
+    'error.tryAgain': 'Try Again',
+    'error.failedFetchTrees': 'Failed to fetch trees',
+    'error.failedComputeRashi': 'Failed to compute rashi',
+
+    // Tree Card
+    'tree.primary': 'Primary Tree',
+    'tree.careTips': 'Care Tips',
+    'tree.idealRegion': 'Ideal Region',
+
+    // Tree Names and Details - MESHA (Aries)
+    'tree.khair.name': 'Khair',
+    'tree.khair.description': 'A thorny deciduous tree known for producing catechu (katha). Symbolizes strength and resilience, perfect for the warrior spirit of Aries.',
+    'tree.khair.careTips': 'Drought-tolerant. Full sun. Grows well in dry, rocky soils.',
+    'tree.khair.idealRegion': 'Gujarat dry deciduous forests',
+    'tree.palash.name': 'Palash',
+    'tree.palash.description': 'The Flame of the Forest with brilliant orange-red flowers. Its fiery blooms represent the passionate Mars energy.',
+    'tree.palash.careTips': 'Full sun. Drought-tolerant. Thrives in poor, dry soil.',
+    'tree.palash.idealRegion': 'Tropical dry deciduous forests',
+    'tree.khejri.name': 'Khejri / Shami',
+    'tree.khejri.description': 'The sacred Shami tree worshipped during Dussehra. Known as the "King of the Desert", embodying courage.',
+    'tree.khejri.careTips': 'Extremely drought-resistant. Full sun. Thrives in arid conditions.',
+    'tree.khejri.idealRegion': 'Arid regions of Gujarat and Rajasthan',
+    'tree.gorad_babool.name': 'Gorad Babool',
+    'tree.gorad_babool.description': 'A hardy acacia tree with medicinal bark. Represents protection and strength in harsh conditions.',
+    'tree.gorad_babool.careTips': 'Drought-tolerant. Full sun. Grows in saline and alkaline soils.',
+    'tree.gorad_babool.idealRegion': 'Arid and semi-arid Gujarat',
+    'tree.bordi.name': 'Bordi',
+    'tree.bordi.description': 'The Indian Jujube, known for its sweet fruits. A resilient tree symbolizing prosperity and sustenance.',
+    'tree.bordi.careTips': 'Very drought-tolerant. Full sun. Minimal maintenance once established.',
+    'tree.bordi.idealRegion': 'Throughout Gujarat',
+
+    // VRISHABHA (Taurus)
+    'tree.gular.name': 'Gular',
+    'tree.gular.description': 'The cluster fig tree, sacred in Hindu tradition. Represents abundance and fertility - perfect for Venus-ruled Taurus.',
+    'tree.gular.careTips': 'Moist soil preferred. Full sun to partial shade. Regular watering.',
+    'tree.gular.idealRegion': 'Along water bodies in Gujarat',
+    'tree.jamun.name': 'Jamun',
+    'tree.jamun.description': 'The Java Plum with purple-black fruits. A tree of prosperity and health, aligned with Taurus\' love for earthly pleasures.',
+    'tree.jamun.careTips': 'Full sun. Regular watering. Tolerates waterlogging.',
+    'tree.jamun.idealRegion': 'Tropical Gujarat',
+    'tree.amla.name': 'Amla',
+    'tree.amla.description': 'The Indian Gooseberry, richest natural source of Vitamin C. Sacred tree representing health and beauty.',
+    'tree.amla.careTips': 'Full sun. Drought-tolerant once established. Minimal maintenance.',
+    'tree.amla.idealRegion': 'Tropical and subtropical Gujarat',
+    'tree.mango.name': 'Mango',
+    'tree.mango.description': 'The King of Fruits! Gujarat\'s Kesar mangoes are world-famous. Represents sweetness and luxury.',
+    'tree.mango.careTips': 'Full sun essential. Deep watering during dry spells. Protect from frost when young.',
+    'tree.mango.idealRegion': 'Tropical lowlands, especially Junagadh and Amreli',
+    'tree.banyan.name': 'Banyan',
+    'tree.banyan.description': 'The majestic national tree of India. Its vast canopy represents protection and immortality.',
+    'tree.banyan.careTips': 'Requires full sun and plenty of space. Water deeply but infrequently.',
+    'tree.banyan.idealRegion': 'Throughout Gujarat',
+
+    // MITHUNA (Gemini)
+    'tree.neem.name': 'Neem',
+    'tree.neem.description': 'The divine healer with incredible medicinal properties. Mercury\'s tree of wisdom and communication.',
+    'tree.neem.careTips': 'Drought-tolerant once established. Full sun. Can grow in poor soil.',
+    'tree.neem.idealRegion': 'Throughout Gujarat',
+    'tree.bamboo.name': 'Bamboo',
+    'tree.bamboo.description': 'The fastest-growing plant on Earth. Symbol of flexibility and rapid growth - matching Gemini\'s adaptability.',
+    'tree.bamboo.careTips': 'Moist, well-drained soil. Full sun to partial shade. Can spread aggressively.',
+    'tree.bamboo.idealRegion': 'Tropical and temperate zones',
+    'tree.bael.name': 'Bael',
+    'tree.bael.description': 'Sacred to Lord Shiva. Its trifoliate leaves represent the three aspects of consciousness.',
+    'tree.bael.careTips': 'Drought-tolerant. Full sun. Can grow in poor, rocky soil.',
+    'tree.bael.idealRegion': 'Dry forests of Gujarat',
+    'tree.karanj.name': 'Karanj',
+    'tree.karanj.description': 'The Indian Beech, known for its oil-rich seeds. Represents knowledge and utility.',
+    'tree.karanj.careTips': 'Very adaptable. Tolerates drought and saline conditions. Full sun.',
+    'tree.karanj.idealRegion': 'Coastal and tropical Gujarat',
+    'tree.desi_babool.name': 'Desi Babool',
+    'tree.desi_babool.description': 'A versatile acacia species with multiple uses. Symbolizes practical wisdom.',
+    'tree.desi_babool.careTips': 'Drought-tolerant. Full sun. Grows in various soil types.',
+    'tree.desi_babool.idealRegion': 'Arid regions of Gujarat',
+
+    // KARKA (Cancer)
+    'tree.kadamba.name': 'Kadamba',
+    'tree.kadamba.description': 'Associated with Lord Krishna and monsoons. Its fragrant flowers bloom during rains, connecting to Moon\'s watery nature.',
+    'tree.kadamba.careTips': 'Moist soil. Full sun. Fast-growing in suitable conditions.',
+    'tree.kadamba.idealRegion': 'Tropical moist forests',
+    'tree.arjun.name': 'Arjun',
+    'tree.arjun.description': 'Named after the legendary warrior. Its bark is a renowned heart tonic - nurturing like Cancer.',
+    'tree.arjun.careTips': 'Grows near water bodies. Full sun. Tolerates flooding.',
+    'tree.arjun.idealRegion': 'River banks across Gujarat',
+    'tree.coconut.name': 'Coconut',
+    'tree.coconut.description': 'The Tree of Life! Provides food, water, oil - nurturing in every way, like Moon-ruled Cancer.',
+    'tree.coconut.careTips': 'Full sun and sandy soil. Regular watering. Tolerates salt spray.',
+    'tree.coconut.idealRegion': 'Coastal Gujarat',
+    'tree.tad_palm.name': 'Tad Palm',
+    'tree.tad_palm.description': 'The Palmyra Palm, providing neera and toddy. A nurturing tree for communities.',
+    'tree.tad_palm.careTips': 'Full sun. Drought-tolerant once established. Sandy soil preferred.',
+    'tree.tad_palm.idealRegion': 'Coastal and semi-arid Gujarat',
+    'tree.banana.name': 'Banana',
+    'tree.banana.description': 'Sacred in Hindu rituals. Every part is useful - the ultimate nurturing plant.',
+    'tree.banana.careTips': 'Moist, rich soil. Full sun. Regular feeding and watering.',
+    'tree.banana.idealRegion': 'Throughout Gujarat',
+
+    // SIMHA (Leo)
+    'tree.peepal.name': 'Peepal',
+    'tree.peepal.description': 'The sacred fig under which Buddha attained enlightenment. The royal tree of spiritual awakening.',
+    'tree.peepal.careTips': 'Full sun to partial shade. Regular watering when young. Extremely long-lived.',
+    'tree.peepal.idealRegion': 'Throughout Gujarat',
+    'tree.arka_aak.name': 'Arka/Aak',
+    'tree.arka_aak.description': 'The Crown Flower, sacred to Lord Shiva and Sun God. Its regal purple flowers suit Leo\'s majesty.',
+    'tree.arka_aak.careTips': 'Extremely drought-tolerant. Full sun. Grows in poor soil.',
+    'tree.arka_aak.idealRegion': 'Arid regions of Gujarat',
+    'tree.rudraksha.name': 'Rudraksha',
+    'tree.rudraksha.description': 'The sacred bead tree. Its seeds are worn for spiritual power and protection.',
+    'tree.rudraksha.careTips': 'Moist, well-drained soil. Partial shade. Humid conditions preferred.',
+    'tree.rudraksha.idealRegion': 'Himalayan foothills (can be grown in Gujarat gardens)',
+
+    // KANYA (Virgo)
+    'tree.harad.name': 'Harad',
+    'tree.harad.description': 'The "King of Medicines" in Ayurveda. Perfect for detail-oriented, health-conscious Virgo.',
+    'tree.harad.careTips': 'Moist soil. Full sun to partial shade. Moderate watering.',
+    'tree.harad.idealRegion': 'Deciduous forests of Gujarat',
+    'tree.kachnar.name': 'Kachnar',
+    'tree.kachnar.description': 'The Orchid Tree with beautiful flowers. Represents purity and precision.',
+    'tree.kachnar.careTips': 'Full sun. Moderate watering. Prune after flowering.',
+    'tree.kachnar.idealRegion': 'Throughout Gujarat',
+
+    // TULA (Libra)
+    'tree.ashoka.name': 'Ashoka',
+    'tree.ashoka.description': 'The tree of love and beauty. Its name means "without sorrow" - balancing like Libra.',
+    'tree.ashoka.careTips': 'Prefers partial shade. Keep soil consistently moist. Slow-growing but worth the wait.',
+    'tree.ashoka.idealRegion': 'Moist forests of Gujarat',
+    'tree.champa.name': 'Champa',
+    'tree.champa.description': 'Frangipani with intensely fragrant flowers. Symbol of devotion and beauty.',
+    'tree.champa.careTips': 'Full sun. Allow soil to dry between watering. Protect from frost.',
+    'tree.champa.idealRegion': 'Tropical and subtropical Gujarat',
+    'tree.parijat.name': 'Parijat',
+    'tree.parijat.description': 'Night Jasmine with heavenly fragrance. Its delicate beauty suits Venus-ruled Libra.',
+    'tree.parijat.careTips': 'Partial shade. Regular watering. Prune after flowering.',
+    'tree.parijat.idealRegion': 'Throughout Gujarat',
+
+    // VRISHCHIKA (Scorpio)
+    'tree.ber_bordi.name': 'Ber/Bordi',
+    'tree.ber_bordi.description': 'The thorny Jujube tree. Its protective thorns match Scorpio\'s defensive nature.',
+    'tree.ber_bordi.careTips': 'Very drought-tolerant. Full sun. Minimal maintenance.',
+    'tree.ber_bordi.idealRegion': 'Throughout Gujarat',
+    'tree.nagkesar.name': 'Nagkesar',
+    'tree.nagkesar.description': 'The Ceylon Ironwood with fragrant flowers. Represents transformation and depth.',
+    'tree.nagkesar.careTips': 'Partial shade. Moist, rich soil. Slow-growing.',
+    'tree.nagkesar.idealRegion': 'Moist forests (can be grown in Gujarat gardens)',
+
+    // DHANU (Sagittarius)
+    'tree.gular_dhanu.name': 'Gular',
+    'tree.gular_dhanu.description': 'The sacred fig of abundance. Jupiter\'s expansive energy flows through this generous tree.',
+    'tree.gular_dhanu.careTips': 'Moist soil preferred. Full sun to partial shade. Regular watering.',
+    'tree.gular_dhanu.idealRegion': 'Along water bodies in Gujarat',
+
+    // MAKARA (Capricorn)
+    'tree.tamarind.name': 'Tamarind',
+    'tree.tamarind.description': 'The ancient tamarind, slow-growing but long-lived. Saturn\'s patience in tree form.',
+    'tree.tamarind.careTips': 'Drought-tolerant. Full sun. Minimal care once established.',
+    'tree.tamarind.idealRegion': 'Throughout Gujarat',
+    'tree.vilayati_babool.name': 'Vilayati Babool',
+    'tree.vilayati_babool.description': 'The hardy mesquite tree. Represents discipline and survival against odds.',
+    'tree.vilayati_babool.careTips': 'Extremely drought-tolerant. Full sun. Grows in poorest soils.',
+    'tree.vilayati_babool.idealRegion': 'Arid Gujarat',
+
+    // KUMBHA (Aquarius)
+    'tree.fig_group.name': 'Fig Group',
+    'tree.fig_group.description': 'The community of fig trees. Aquarius\' humanitarian nature reflected in trees that feed many.',
+    'tree.fig_group.careTips': 'Varies by species. Generally adaptable and easy to grow.',
+    'tree.fig_group.idealRegion': 'Throughout Gujarat',
+
+    // MEENA (Pisces)
+    'tree.kadamba_meen.name': 'Kadamba',
+    'tree.kadamba_meen.description': 'The monsoon tree with ethereal fragrance. Jupiter\'s spiritual wisdom for dreamy Pisces.',
+    'tree.kadamba_meen.careTips': 'Moist soil. Full sun. Fast-growing in suitable conditions.',
+    'tree.kadamba_meen.idealRegion': 'Tropical moist forests',
+
+    // QR Code
+    'qr.title': 'Rashi Tree Guide Result',
+    'qr.moonSign': 'Moon Sign',
+    'qr.element': 'Element',
+    'qr.rulingPlanet': 'Ruling Planet',
+    'qr.recommendedTrees': 'Recommended Sacred Trees',
+    'qr.plantTree': 'Plant a tree, nurture life!',
+
+    // Layout
+    'layout.title': 'Rashi Tree Guide',
+    'layout.home': 'Home',
+    'layout.footer': 'Discover your celestial tree companions based on Vedic astrology',
+    'layout.footerNote': 'Moon sign (Chandra Rashi) calculated using Lahiri Ayanamsa',
+
+    // FindRashi Additional
+    'findRashi.intro': 'Enter your birth details to discover your Moon sign and recommended trees.',
+
+    // Days of Week
+    'day.sunday': 'Sunday',
+    'day.monday': 'Monday',
+    'day.tuesday': 'Tuesday',
+    'day.wednesday': 'Wednesday',
+    'day.thursday': 'Thursday',
+    'day.friday': 'Friday',
+    'day.saturday': 'Saturday',
+    'day.everyday': 'Everyday',
+
+    // Colors
+    'color.red': 'Red',
+    'color.green': 'Green',
+    'color.yellow': 'Yellow',
+    'color.white': 'White',
+    'color.blue': 'Blue',
+    'color.gold': 'Gold',
+    'color.black': 'Black',
+
+    // Result Page Additional
+    'result.moon': 'Moon',
+    'result.sidereal': 'sidereal',
+    'result.everydayLucky': 'Everyday is lucky',
+    'result.unique': 'Unique',
+    'result.special': 'Special',
+
+    // Rashi Names
+    'rashi.MESHA.label': 'Mesh',
+    'rashi.MESHA.englishName': 'Aries',
+    'rashi.VRISHABHA.label': 'Vrishabh',
+    'rashi.VRISHABHA.englishName': 'Taurus',
+    'rashi.MITHUNA.label': 'Mithun',
+    'rashi.MITHUNA.englishName': 'Gemini',
+    'rashi.KARKA.label': 'Kark',
+    'rashi.KARKA.englishName': 'Cancer',
+    'rashi.SIMHA.label': 'Simha',
+    'rashi.SIMHA.englishName': 'Leo',
+    'rashi.KANYA.label': 'Kanya',
+    'rashi.KANYA.englishName': 'Virgo',
+    'rashi.TULA.label': 'Tula',
+    'rashi.TULA.englishName': 'Libra',
+    'rashi.VRISHCHIKA.label': 'Vrishchik',
+    'rashi.VRISHCHIKA.englishName': 'Scorpio',
+    'rashi.DHANU.label': 'Dhanu',
+    'rashi.DHANU.englishName': 'Sagittarius',
+    'rashi.MAKARA.label': 'Makar',
+    'rashi.MAKARA.englishName': 'Capricorn',
+    'rashi.KUMBHA.label': 'Kumbh',
+    'rashi.KUMBHA.englishName': 'Aquarius',
+    'rashi.MEENA.label': 'Meen',
+    'rashi.MEENA.englishName': 'Pisces',
+
+    // Elements
+    'element.Fire': 'Fire',
+    'element.Earth': 'Earth',
+    'element.Air': 'Air',
+    'element.Water': 'Water',
+
+    // Planets
+    'planet.Mars': 'Mars',
+    'planet.Venus': 'Venus',
+    'planet.Mercury': 'Mercury',
+    'planet.Moon': 'Moon',
+    'planet.Sun': 'Sun',
+    'planet.Jupiter': 'Jupiter',
+    'planet.Saturn': 'Saturn',
   },
   hi: {
     // Home
@@ -691,6 +968,283 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Timer
     'timer.inactive': 'सत्र समाप्त होगा',
+
+    // Nursery Redirect
+    'nursery.redirecting': 'पुनर्निर्देशित हो रहा है',
+    'nursery.seconds': 'सेकंड',
+    'nursery.errorMessage': 'सुरक्षा प्रतिबंधों के कारण नर्सरी मानचित्र यहां प्रदर्शित नहीं किया जा सकता। इसे इस टैब में खोलने के लिए नीचे क्लिक करें।',
+    'nursery.secondsUntilRedirect': 'सेकंड तक होम पर स्वचालित पुनर्निर्देशन',
+    'nursery.openMap': 'नर्सरी मानचित्र खोलें',
+    'nursery.returnHome': 'होम पर वापस जाएं',
+    'nursery.loading': 'नर्सरी मानचित्र लोड हो रहा है...',
+
+    // NotFound
+    'notFound.title': 'पृष्ठ नहीं मिला',
+    'notFound.message': 'आप जो पथ खोज रहे हैं वह मौजूद नहीं है। आइए आपको अपने पवित्र वृक्षों की खोज में वापस ले चलें।',
+    'notFound.returnHome': 'होम पर वापस जाएं',
+
+    // Loading
+    'loading.discovering': 'आपके वृक्ष खोज रहे हैं...',
+    'loading.calculating': 'आपकी चंद्र राशि की गणना हो रही है...',
+
+    // Error
+    'error.title': 'कुछ गलत हो गया',
+    'error.tryAgain': 'पुनः प्रयास करें',
+    'error.failedFetchTrees': 'वृक्ष प्राप्त करने में विफल',
+    'error.failedComputeRashi': 'राशि गणना करने में विफल',
+
+    // Tree Card
+    'tree.primary': 'मुख्य वृक्ष',
+    'tree.careTips': 'देखभाल सुझाव',
+    'tree.idealRegion': 'आदर्श क्षेत्र',
+
+    // Tree Names and Details - MESHA (Aries)
+    'tree.khair.name': 'खैर',
+    'tree.khair.description': 'कांटेदार पर्णपाती वृक्ष, जो कत्था (काथा) के लिए प्रसिद्ध है। यह शक्ति और दृढ़ता का प्रतीक है—मेष राशि की योद्धा प्रवृत्ति के लिए उपयुक्त।',
+    'tree.khair.careTips': 'सूखा सहनशील। पूर्ण धूप। सूखी, पथरीली मिट्टी में अच्छा बढ़ता है।',
+    'tree.khair.idealRegion': 'गुजरात के शुष्क पर्णपाती वन',
+    'tree.palash.name': 'पलाश',
+    'tree.palash.description': '"जंगल की अग्नि" कहलाने वाला वृक्ष, जिसके चमकीले नारंगी-लाल फूल होते हैं। इसकी ज्वलंत पुष्प-छटा मंगल की ऊर्जावान प्रकृति दर्शाती है।',
+    'tree.palash.careTips': 'पूर्ण धूप। सूखा सहनशील। कम उपजाऊ, सूखी मिट्टी में भी बढ़ता है।',
+    'tree.palash.idealRegion': 'उष्णकटिबंधीय शुष्क पर्णपाती वन',
+    'tree.khejri.name': 'खेजड़ी / शमी',
+    'tree.khejri.description': 'दशहरे में पूजित पवित्र शमी वृक्ष। "रेगिस्तान का राजा" कहलाता है और साहस का प्रतीक है।',
+    'tree.khejri.careTips': 'अत्यधिक सूखा-प्रतिरोधी। पूर्ण धूप। शुष्क परिस्थितियों में खूब पनपता है।',
+    'tree.khejri.idealRegion': 'गुजरात और राजस्थान के शुष्क क्षेत्र',
+    'tree.gorad_babool.name': 'गोरड़ बबूल',
+    'tree.gorad_babool.description': 'औषधीय छाल वाला मजबूत बबूल वृक्ष। कठोर परिस्थितियों में सुरक्षा और शक्ति का प्रतीक।',
+    'tree.gorad_babool.careTips': 'सूखा सहनशील। पूर्ण धूप। खारी और क्षारीय मिट्टी में भी उगता है।',
+    'tree.gorad_babool.idealRegion': 'गुजरात के शुष्क और अर्ध-शुष्क क्षेत्र',
+    'tree.bordi.name': 'बेर',
+    'tree.bordi.description': 'भारतीय बेर, अपने मीठे फलों के लिए प्रसिद्ध। समृद्धि और पोषण का प्रतीक, अत्यंत सहनशील वृक्ष।',
+    'tree.bordi.careTips': 'बहुत सूखा सहनशील। पूर्ण धूप। स्थापित होने के बाद न्यूनतम देखभाल।',
+    'tree.bordi.idealRegion': 'पूरे गुजरात में',
+
+    // VRISHABHA (Taurus)
+    'tree.gular.name': 'गूलर',
+    'tree.gular.description': 'गूलर (गुच्छेदार अंजीर) हिंदू परंपरा में पवित्र माना जाता है। यह समृद्धि और उर्वरता का प्रतीक है—शुक्र-शासित वृषभ के लिए उपयुक्त।',
+    'tree.gular.careTips': 'नम मिट्टी पसंद। पूर्ण धूप से आंशिक छाया। नियमित पानी।',
+    'tree.gular.idealRegion': 'गुजरात में जल-स्रोतों के किनारे',
+    'tree.jamun.name': 'जामुन',
+    'tree.jamun.description': 'जामुन—बैंगनी-काले फलों वाला वृक्ष। समृद्धि और स्वास्थ्य का प्रतीक, वृषभ के भौतिक सुखों से मेल खाता है।',
+    'tree.jamun.careTips': 'पूर्ण धूप। नियमित पानी। जलभराव सहन कर सकता है।',
+    'tree.jamun.idealRegion': 'उष्णकटिबंधीय गुजरात',
+    'tree.amla.name': 'आंवला',
+    'tree.amla.description': 'आंवला—विटामिन C का समृद्ध प्राकृतिक स्रोत। स्वास्थ्य और सौंदर्य का प्रतीक, पवित्र वृक्ष।',
+    'tree.amla.careTips': 'पूर्ण धूप। स्थापित होने के बाद सूखा सहनशील। कम देखभाल।',
+    'tree.amla.idealRegion': 'उष्णकटिबंधीय और उप-उष्णकटिबंधीय गुजरात',
+    'tree.mango.name': 'आम',
+    'tree.mango.description': 'फलों का राजा—आम! गुजरात के केसर आम विश्व-प्रसिद्ध हैं। मिठास और वैभव का प्रतीक।',
+    'tree.mango.careTips': 'पूर्ण धूप आवश्यक। सूखे समय में गहरा सिंचन। छोटे पौधों को पाले से बचाएँ।',
+    'tree.mango.idealRegion': 'उष्णकटिबंधीय मैदानी क्षेत्र, विशेषकर जूनागढ़ और अमरेली',
+    'tree.banyan.name': 'बरगद / वट',
+    'tree.banyan.description': 'भारत का भव्य राष्ट्रीय वृक्ष—वट/बरगद। इसका विशाल छत्र संरक्षण और अमरत्व का प्रतीक है।',
+    'tree.banyan.careTips': 'पूर्ण धूप और पर्याप्त जगह चाहिए। गहरा पानी दें, लेकिन बार-बार नहीं।',
+    'tree.banyan.idealRegion': 'पूरे गुजरात में',
+
+    // MITHUNA (Gemini)
+    'tree.neem.name': 'नीम',
+    'tree.neem.description': 'अद्भुत औषधीय गुणों वाला दिव्य उपचारक वृक्ष। बुध की बुद्धि और ज्ञान का प्रतीक।',
+    'tree.neem.careTips': 'स्थापित होने के बाद सूखा सहनशील। पूर्ण धूप। खराब मिट्टी में भी उग सकता है।',
+    'tree.neem.idealRegion': 'पूरे गुजरात में',
+    'tree.bamboo.name': 'बाँस',
+    'tree.bamboo.description': 'पृथ्वी पर सबसे तेज़ी से बढ़ने वाला पौधा। लचीलापन और तीव्र विकास का प्रतीक—मिथुन की अनुकूलता जैसा।',
+    'tree.bamboo.careTips': 'नम, अच्छी जल-निकासी वाली मिट्टी। पूर्ण धूप से आंशिक छाया। तेजी से फैल सकता है।',
+    'tree.bamboo.idealRegion': 'उष्णकटिबंधीय और समशीतोष्ण क्षेत्र',
+    'tree.bael.name': 'बेल',
+    'tree.bael.description': 'भगवान शिव को समर्पित पवित्र वृक्ष। इसके त्रिपत्रीय पत्ते चेतना के तीन रूप दर्शाते हैं।',
+    'tree.bael.careTips': 'सूखा सहनशील। पूर्ण धूप। पथरीली और कमजोर मिट्टी में भी उगता है।',
+    'tree.bael.idealRegion': 'गुजरात के शुष्क वन',
+    'tree.karanj.name': 'करंज',
+    'tree.karanj.description': 'करंज—तेल-समृद्ध बीजों वाला वृक्ष। ज्ञान और उपयोगिता का प्रतीक।',
+    'tree.karanj.careTips': 'अत्यंत अनुकूलनीय। सूखा और खारापन सहन करता है। पूर्ण धूप।',
+    'tree.karanj.idealRegion': 'तटीय और उष्णकटिबंधीय गुजरात',
+    'tree.desi_babool.name': 'देसी बबूल',
+    'tree.desi_babool.description': 'बहुउपयोगी देसी बबूल। व्यावहारिक बुद्धिमत्ता का प्रतीक।',
+    'tree.desi_babool.careTips': 'सूखा सहनशील। पूर्ण धूप। विभिन्न मिट्टियों में उगता है।',
+    'tree.desi_babool.idealRegion': 'गुजरात के शुष्क क्षेत्र',
+
+    // KARKA (Cancer)
+    'tree.kadamba.name': 'कदंब',
+    'tree.kadamba.description': 'भगवान कृष्ण और मानसून से जुड़ा वृक्ष। सुगंधित फूल चंद्रमा की जलीय प्रकृति दर्शाते हैं।',
+    'tree.kadamba.careTips': 'नम मिट्टी। पूर्ण धूप। तेज़ी से बढ़ता है।',
+    'tree.kadamba.idealRegion': 'उष्णकटिबंधीय आर्द्र वन',
+    'tree.arjun.name': 'अर्जुन',
+    'tree.arjun.description': 'महायोद्धा अर्जुन के नाम पर। इसकी छाल हृदय के लिए प्रसिद्ध औषधि—पोषक और संरक्षक।',
+    'tree.arjun.careTips': 'जल-स्रोतों के पास उगता है। पूर्ण धूप। बाढ़ सहन करता है।',
+    'tree.arjun.idealRegion': 'गुजरात की नदी-तट भूमि',
+    'tree.coconut.name': 'नारियल',
+    'tree.coconut.description': 'जीवन-वृक्ष—भोजन, जल और तेल प्रदान करता है; कर्क राशि की पोषणकारी प्रकृति जैसा।',
+    'tree.coconut.careTips': 'पूर्ण धूप। रेतीली मिट्टी। नियमित सिंचाई। खारे पानी को सहन करता है।',
+    'tree.coconut.idealRegion': 'तटीय गुजरात',
+    'tree.tad_palm.name': 'ताड़',
+    'tree.tad_palm.description': 'ताड़ वृक्ष—नीरा और ताड़ी का स्रोत। समुदायों का पोषण करने वाला वृक्ष।',
+    'tree.tad_palm.careTips': 'पूर्ण धूप। स्थापित होने के बाद सूखा सहनशील। रेतीली मिट्टी उपयुक्त।',
+    'tree.tad_palm.idealRegion': 'तटीय और अर्ध-शुष्क गुजरात',
+    'tree.banana.name': 'केला',
+    'tree.banana.description': 'हिंदू संस्कारों में पवित्र। इसका हर भाग उपयोगी—पूर्ण पोषण देने वाला पौधा।',
+    'tree.banana.careTips': 'नम, उपजाऊ मिट्टी। पूर्ण धूप। नियमित खाद और पानी।',
+    'tree.banana.idealRegion': 'पूरे गुजरात में',
+
+    // SIMHA (Leo)
+    'tree.peepal.name': 'पीपल',
+    'tree.peepal.description': 'वह पवित्र अंजीर जिसके नीचे बुद्ध को ज्ञान प्राप्त हुआ। आध्यात्मिक जागृति का राजसी वृक्ष।',
+    'tree.peepal.careTips': 'पूर्ण धूप से आंशिक छाया। युवा होने पर नियमित पानी। अत्यंत दीर्घजीवी।',
+    'tree.peepal.idealRegion': 'पूरे गुजरात में',
+    'tree.arka_aak.name': 'आक',
+    'tree.arka_aak.description': 'मुकुट फूल, भगवान शिव और सूर्य देव को समर्पित। इसके राजसी बैंगनी फूल सिंह की महिमा के अनुकूल हैं।',
+    'tree.arka_aak.careTips': 'अत्यधिक सूखा सहनशील। पूर्ण धूप। खराब मिट्टी में भी बढ़ता है।',
+    'tree.arka_aak.idealRegion': 'गुजरात के शुष्क क्षेत्र',
+    'tree.rudraksha.name': 'रुद्राक्ष',
+    'tree.rudraksha.description': 'पवित्र मणि वृक्ष। इसके बीज आध्यात्मिक शक्ति और सुरक्षा के लिए पहने जाते हैं।',
+    'tree.rudraksha.careTips': 'नम, अच्छी जल-निकासी वाली मिट्टी। आंशिक छाया। आर्द्र परिस्थितियां पसंद।',
+    'tree.rudraksha.idealRegion': 'हिमालय की तलहटी (गुजरात के बगीचों में उगाया जा सकता है)',
+
+    // KANYA (Virgo)
+    'tree.harad.name': 'हरड़ / हरितकी',
+    'tree.harad.description': 'आयुर्वेद में "दवाओं का राजा"। विवरण-उन्मुख, स्वास्थ्य-सचेत कन्या के लिए उपयुक्त।',
+    'tree.harad.careTips': 'नम मिट्टी। पूर्ण धूप से आंशिक छाया। मध्यम सिंचाई।',
+    'tree.harad.idealRegion': 'गुजरात के पर्णपाती वन',
+    'tree.kachnar.name': 'कचनार',
+    'tree.kachnar.description': 'सुंदर फूलों वाला ऑर्किड वृक्ष। शुद्धता और सटीकता का प्रतीक।',
+    'tree.kachnar.careTips': 'पूर्ण धूप। मध्यम सिंचाई। फूल आने के बाद छंटाई करें।',
+    'tree.kachnar.idealRegion': 'पूरे गुजरात में',
+
+    // TULA (Libra)
+    'tree.ashoka.name': 'अशोक',
+    'tree.ashoka.description': 'प्रेम और सौंदर्य का वृक्ष। इसका नाम "दुःख रहित" का अर्थ है—तुला जैसा संतुलन।',
+    'tree.ashoka.careTips': 'आंशिक छाया पसंद। मिट्टी को लगातार नम रखें। धीमी वृद्धि लेकिन प्रतीक्षा के योग्य।',
+    'tree.ashoka.idealRegion': 'गुजरात के आर्द्र वन',
+    'tree.champa.name': 'चंपा',
+    'tree.champa.description': 'तीव्र सुगंध वाला फ्रैंगीपैनी। भक्ति और सौंदर्य का प्रतीक।',
+    'tree.champa.careTips': 'पूर्ण धूप। पानी देने के बीच मिट्टी को सूखने दें। पाले से बचाएँ।',
+    'tree.champa.idealRegion': 'उष्णकटिबंधीय और उप-उष्णकटिबंधीय गुजरात',
+    'tree.parijat.name': 'पारिजात / हरसिंगार',
+    'tree.parijat.description': 'स्वर्गीय सुगंध वाला रात का जैस्मीन। इसकी नाजुक सुंदरता शुक्र-शासित तुला के अनुकूल है।',
+    'tree.parijat.careTips': 'आंशिक छाया। नियमित पानी। फूल आने के बाद छंटाई करें।',
+    'tree.parijat.idealRegion': 'पूरे गुजरात में',
+
+    // VRISHCHIKA (Scorpio)
+    'tree.ber_bordi.name': 'बेर',
+    'tree.ber_bordi.description': 'कांटेदार बेर वृक्ष। इसके सुरक्षात्मक कांटे वृश्चिक की रक्षात्मक प्रकृति से मेल खाते हैं।',
+    'tree.ber_bordi.careTips': 'बहुत सूखा सहनशील। पूर्ण धूप। न्यूनतम देखभाल।',
+    'tree.ber_bordi.idealRegion': 'पूरे गुजरात में',
+    'tree.nagkesar.name': 'नागकेसर',
+    'tree.nagkesar.description': 'सुगंधित फूलों वाला सीलोन आयरनवुड। परिवर्तन और गहराई का प्रतीक।',
+    'tree.nagkesar.careTips': 'आंशिक छाया। नम, उपजाऊ मिट्टी। धीमी वृद्धि।',
+    'tree.nagkesar.idealRegion': 'आर्द्र वन (गुजरात के बगीचों में उगाया जा सकता है)',
+
+    // DHANU (Sagittarius)
+    'tree.gular_dhanu.name': 'गूलर',
+    'tree.gular_dhanu.description': 'समृद्धि का पवित्र अंजीर। गुरु की विस्तृत ऊर्जा इस उदार वृक्ष से प्रवाहित होती है।',
+    'tree.gular_dhanu.careTips': 'नम मिट्टी पसंद। पूर्ण धूप से आंशिक छाया। नियमित पानी।',
+    'tree.gular_dhanu.idealRegion': 'गुजरात में जल-स्रोतों के किनारे',
+
+    // MAKARA (Capricorn)
+    'tree.tamarind.name': 'इमली',
+    'tree.tamarind.description': 'प्राचीन इमली, धीमी वृद्धि लेकिन दीर्घजीवी। वृक्ष रूप में शनि का धैर्य।',
+    'tree.tamarind.careTips': 'सूखा सहनशील। पूर्ण धूप। स्थापित होने के बाद न्यूनतम देखभाल।',
+    'tree.tamarind.idealRegion': 'पूरे गुजरात में',
+    'tree.vilayati_babool.name': 'विलायती बबूल',
+    'tree.vilayati_babool.description': 'मजबूत मेस्क्वाइट वृक्ष। अनुशासन और विपरीत परिस्थितियों में जीवित रहने का प्रतीक।',
+    'tree.vilayati_babool.careTips': 'अत्यधिक सूखा सहनशील। पूर्ण धूप। सबसे खराब मिट्टी में भी बढ़ता है।',
+    'tree.vilayati_babool.idealRegion': 'शुष्क गुजरात',
+
+    // KUMBHA (Aquarius)
+    'tree.fig_group.name': 'अंजीर',
+    'tree.fig_group.description': 'अंजीर वृक्षों का समुदाय। कुंभ की मानवतावादी प्रकृति कई को खिलाने वाले वृक्षों में परिलक्षित होती है।',
+    'tree.fig_group.careTips': 'प्रजाति के अनुसार भिन्न होता है। सामान्यतः अनुकूलनीय और उगाने में आसान।',
+    'tree.fig_group.idealRegion': 'पूरे गुजरात में',
+
+    // MEENA (Pisces)
+    'tree.kadamba_meen.name': 'कदंब',
+    'tree.kadamba_meen.description': 'स्वर्गीय सुगंध वाला मानसूनी वृक्ष। स्वप्निल मीन के लिए गुरु की आध्यात्मिक बुद्धिमत्ता।',
+    'tree.kadamba_meen.careTips': 'नम मिट्टी। पूर्ण धूप। उपयुक्त परिस्थितियों में तेज़ी से बढ़ता है।',
+    'tree.kadamba_meen.idealRegion': 'उष्णकटिबंधीय आर्द्र वन',
+
+    // QR Code
+    'qr.title': 'राशि वृक्ष गाइड परिणाम',
+    'qr.moonSign': 'चंद्र राशि',
+    'qr.element': 'तत्व',
+    'qr.rulingPlanet': 'स्वामी ग्रह',
+    'qr.recommendedTrees': 'अनुशंसित पवित्र वृक्ष',
+    'qr.plantTree': 'वृक्ष लगाओ, जीवन पालो!',
+
+    // Layout
+    'layout.title': 'राशि वृक्ष गाइड',
+    'layout.home': 'होम',
+    'layout.footer': 'वैदिक ज्योतिष के आधार पर अपने आकाशीय वृक्ष साथियों की खोज करें',
+    'layout.footerNote': 'चंद्र राशि लाहिरी अयनांश का उपयोग करके गणना की गई',
+
+    // FindRashi Additional
+    'findRashi.intro': 'अपनी चंद्र राशि और अनुशंसित वृक्षों की खोज के लिए अपने जन्म विवरण दर्ज करें।',
+
+    // Days of Week
+    'day.sunday': 'रविवार',
+    'day.monday': 'सोमवार',
+    'day.tuesday': 'मंगलवार',
+    'day.wednesday': 'बुधवार',
+    'day.thursday': 'गुरुवार',
+    'day.friday': 'शुक्रवार',
+    'day.saturday': 'शनिवार',
+    'day.everyday': 'हर दिन',
+
+    // Colors
+    'color.red': 'लाल',
+    'color.green': 'हरा',
+    'color.yellow': 'पीला',
+    'color.white': 'सफेद',
+    'color.blue': 'नीला',
+    'color.gold': 'सोना',
+    'color.black': 'काला',
+
+    // Result Page Additional
+    'result.moon': 'चंद्रमा',
+    'result.sidereal': 'सायन',
+    'result.everydayLucky': 'हर दिन शुभ है',
+    'result.unique': 'अनोखा',
+    'result.special': 'विशेष',
+
+    // Rashi Names
+    'rashi.MESHA.label': 'मेष',
+    'rashi.MESHA.englishName': 'एरीज़',
+    'rashi.VRISHABHA.label': 'वृषभ',
+    'rashi.VRISHABHA.englishName': 'टॉरस',
+    'rashi.MITHUNA.label': 'मिथुन',
+    'rashi.MITHUNA.englishName': 'जेमिनी',
+    'rashi.KARKA.label': 'कर्क',
+    'rashi.KARKA.englishName': 'कैंसर',
+    'rashi.SIMHA.label': 'सिंह',
+    'rashi.SIMHA.englishName': 'लियो',
+    'rashi.KANYA.label': 'कन्या',
+    'rashi.KANYA.englishName': 'विर्गो',
+    'rashi.TULA.label': 'तुला',
+    'rashi.TULA.englishName': 'लिब्रा',
+    'rashi.VRISHCHIKA.label': 'वृश्चिक',
+    'rashi.VRISHCHIKA.englishName': 'स्कॉर्पियो',
+    'rashi.DHANU.label': 'धनु',
+    'rashi.DHANU.englishName': 'सैजिटेरियस',
+    'rashi.MAKARA.label': 'मकर',
+    'rashi.MAKARA.englishName': 'कैप्रिकॉर्न',
+    'rashi.KUMBHA.label': 'कुंभ',
+    'rashi.KUMBHA.englishName': 'एक्वेरियस',
+    'rashi.MEENA.label': 'मीन',
+    'rashi.MEENA.englishName': 'पाइसीज़',
+
+    // Elements
+    'element.Fire': 'अग्नि',
+    'element.Earth': 'पृथ्वी',
+    'element.Air': 'वायु',
+    'element.Water': 'जल',
+
+    // Planets
+    'planet.Mars': 'मंगल',
+    'planet.Venus': 'शुक्र',
+    'planet.Mercury': 'बुध',
+    'planet.Moon': 'चंद्र',
+    'planet.Sun': 'सूर्य',
+    'planet.Jupiter': 'गुरु',
+    'planet.Saturn': 'शनि',
   },
   gu: {
     // Home
@@ -797,6 +1351,283 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Timer
     'timer.inactive': 'સત્ર સમાપ્ત થશે',
+
+    // Nursery Redirect
+    'nursery.redirecting': 'પુનઃનિર્દેશિત થઈ રહ્યું છે',
+    'nursery.seconds': 'સેકન્ડ',
+    'nursery.errorMessage': 'સુરક્ષા પ્રતિબંધોના કારણે નર્સરી નકશો અહીં પ્રદર્શિત કરી શકાતો નથી. તેને આ ટેબમાં ખોલવા માટે નીચે ક્લિક કરો.',
+    'nursery.secondsUntilRedirect': 'સેકન્ડ સુધી હોમ પર સ્વચાલિત પુનઃનિર્દેશન',
+    'nursery.openMap': 'નર્સરી નકશો ખોલો',
+    'nursery.returnHome': 'હોમ પર પાછા જાઓ',
+    'nursery.loading': 'નર્સરી નકશો લોડ થઈ રહ્યો છે...',
+
+    // NotFound
+    'notFound.title': 'પૃષ્ઠ મળ્યું નથી',
+    'notFound.message': 'તમે જે પાથ શોધી રહ્યા છો તે અસ્તિત્વમાં નથી. ચાલો તમને તમારા પવિત્ર વૃક્ષો શોધવામાં પાછા લઈ જઈએ.',
+    'notFound.returnHome': 'હોમ પર પાછા જાઓ',
+
+    // Loading
+    'loading.discovering': 'તમારા વૃક્ષો શોધી રહ્યા છે...',
+    'loading.calculating': 'તમારી ચંદ્ર રાશિની ગણતરી થઈ રહી છે...',
+
+    // Error
+    'error.title': 'કંઈક ખોટું થયું',
+    'error.tryAgain': 'ફરી પ્રયાસ કરો',
+    'error.failedFetchTrees': 'વૃક્ષો મેળવવામાં નિષ્ફળ',
+    'error.failedComputeRashi': 'રાશિ ગણતરી કરવામાં નિષ્ફળ',
+
+    // Tree Card
+    'tree.primary': 'મુખ્ય વૃક્ષ',
+    'tree.careTips': 'સંભાળ સૂચનો',
+    'tree.idealRegion': 'આદર્શ પ્રદેશ',
+
+    // Tree Names and Details - MESHA (Aries)
+    'tree.khair.name': 'ખેર',
+    'tree.khair.description': 'કાંટાળું પર્ણપાતી વૃક્ષ, જેમાંથી કાથો/કથ્થા બને છે. શક્તિ અને સહનશીલતાનું પ્રતીક—મેષ રાશિના યોદ્ધા સ્વભાવને અનુકૂળ.',
+    'tree.khair.careTips': 'સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. સૂકી અને પથ્થરાળી જમીનમાં સારી રીતે વધે છે.',
+    'tree.khair.idealRegion': 'ગુજરાતના શુષ્ક પર્ણપાતી જંગલો',
+    'tree.palash.name': 'પલાશ',
+    'tree.palash.description': '"જંગલની આગ" તરીકે ઓળખાતું વૃક્ષ, તેજ નારંગી-લાલ ફૂલો સાથે. તેના જ્વલંત ફૂલો મંગળની ઉર્જા દર્શાવે છે.',
+    'tree.palash.careTips': 'પૂરતો સૂર્યપ્રકાશ. સુકાસહનશીલ. ગરીબ/સૂકી જમીનમાં પણ ફલે છે.',
+    'tree.palash.idealRegion': 'ઉષ્ણકટિબંધીય શુષ્ક પર્ણપાતી જંગલો',
+    'tree.khejri.name': 'ખેજડી / શમી',
+    'tree.khejri.description': 'દશેરામાં પૂજાતું પવિત્ર શમી વૃક્ષ. "રણનો રાજા" તરીકે ઓળખાય છે અને સાહસનું પ્રતીક છે.',
+    'tree.khejri.careTips': 'અત્યંત સુકા-પ્રતિરોધક. પૂરતો સૂર્યપ્રકાશ. શુષ્ક પરિસ્થિતિમાં ઉત્તમ રીતે વધે છે.',
+    'tree.khejri.idealRegion': 'ગુજરાત અને રાજસ્થાનના શુષ્ક પ્રદેશો',
+    'tree.gorad_babool.name': 'ગોરાડ બબૂલ',
+    'tree.gorad_babool.description': 'ઔષધીય છાલ ધરાવતું મજબૂત બબૂલ વૃક્ષ. કઠિન પરિસ્થિતિમાં રક્ષણ અને શક્તિનું પ્રતીક.',
+    'tree.gorad_babool.careTips': 'સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. ખારી અને ક્ષારિય જમીનમાં પણ વધે છે.',
+    'tree.gorad_babool.idealRegion': 'ગુજરાતના શુષ્ક અને અર્ધ-શુષ્ક વિસ્તારો',
+    'tree.bordi.name': 'બોરડી',
+    'tree.bordi.description': 'ભારતીય બોરડી, મીઠા ફળો માટે જાણીતી. સમૃદ્ધિ અને પોષણનું પ્રતીક, ખૂબ સહનશીલ વૃક્ષ.',
+    'tree.bordi.careTips': 'ખૂબ જ સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. સ્થાપિત થયા પછી ઓછી જાળવણી.',
+    'tree.bordi.idealRegion': 'સમગ્ર ગુજરાતમાં',
+
+    // VRISHABHA (Taurus)
+    'tree.gular.name': 'ગૂલર',
+    'tree.gular.description': 'ગૂલર (ગુચ્છ ફળવાળું અંજીર) હિંદુ પરંપરામાં પવિત્ર માનવામાં આવે છે. સમૃદ્ધિ અને ફળદ્રુપતાનું પ્રતીક—શુક્ર શાસિત વૃષભ માટે યોગ્ય.',
+    'tree.gular.careTips': 'ભીની જમીન ગમે છે. પૂરતો સૂર્યપ્રકાશથી અર્ધછાંયો. નિયમિત પાણી.',
+    'tree.gular.idealRegion': 'ગુજરાતના પાણીના સ્ત્રોતોના કિનારે',
+    'tree.jamun.name': 'જામુન',
+    'tree.jamun.description': 'જામુન—જાંબલી-કાળા ફળો ધરાવતું વૃક્ષ. સમૃદ્ધિ અને આરોગ્યનું પ્રતીક, વૃષભની ધરતીજન્ય પસંદ સાથે સુસંગત.',
+    'tree.jamun.careTips': 'પૂરતો સૂર્યપ્રકાશ. નિયમિત પાણી. પાણી ભરાય તો પણ સહન કરે છે.',
+    'tree.jamun.idealRegion': 'ઉષ્ણકટિબંધીય ગુજરાત',
+    'tree.amla.name': 'આમળા',
+    'tree.amla.description': 'આમળા—વિટામિન C નો સમૃદ્ધ કુદરતી સ્ત્રોત. આરોગ્ય અને સૌંદર્યનું પ્રતીક, પવિત્ર વૃક્ષ.',
+    'tree.amla.careTips': 'પૂરતો સૂર્યપ્રકાશ. સ્થાપિત થયા પછી સુકાસહનશીલ. ઓછી જાળવણી.',
+    'tree.amla.idealRegion': 'ઉષ્ણકટિબંધીય અને ઉપ-ઉષ્ણકટિબંધીય ગુજરાત',
+    'tree.mango.name': 'કેરી',
+    'tree.mango.description': 'ફળોનો રાજા—કેરી! ગુજરાતની કેસર કેરી વિશ્વવિખ્યાત છે. મીઠાશ અને વૈભવનું પ્રતીક.',
+    'tree.mango.careTips': 'પૂરતો સૂર્યપ્રકાશ જરૂરી. સૂકા દિવસોમાં ઊંડું સિંચન. નાનાં છોડને તુષાર/ઠંડીથી બચાવો.',
+    'tree.mango.idealRegion': 'ઉષ્ણકટિબંધીય નીચાણવાળા પ્રદેશો, ખાસ કરીને જૂનાગઢ અને અમરેલી',
+    'tree.banyan.name': 'વડ / વડલો',
+    'tree.banyan.description': 'ભારતનું ભવ્ય રાષ્ટ્રીય વૃક્ષ—વડ/વડલો. તેની વિશાળ છાંય સુરક્ષા અને અમરતાનું પ્રતીક છે.',
+    'tree.banyan.careTips': 'પૂરતો સૂર્યપ્રકાશ અને પૂરતી જગ્યા જોઈએ. ઊંડું પાણી આપો, પરંતુ વારંવાર નહીં.',
+    'tree.banyan.idealRegion': 'સમગ્ર ગુજરાતમાં',
+
+    // MITHUNA (Gemini)
+    'tree.neem.name': 'લીંબડો',
+    'tree.neem.description': 'અદ્ભુત ઔષધીય ગુણો ધરાવતું દિવ્ય ઉપચારક વૃક્ષ. બુધની બુદ્ધિ અને જ્ઞાનનું પ્રતીક.',
+    'tree.neem.careTips': 'સ્થાપિત થયા પછી સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. નબળી જમીનમાં પણ ઉગી શકે છે.',
+    'tree.neem.idealRegion': 'સમગ્ર ગુજરાતમાં',
+    'tree.bamboo.name': 'વાંસ',
+    'tree.bamboo.description': 'પૃથ્વી પર સૌથી ઝડપી વધતું છોડ. લવચીકતા અને ઝડપી વિકાસનું પ્રતીક—મિથુનની અનુકૂળતાને અનુરૂપ.',
+    'tree.bamboo.careTips': 'ભીની અને સારી ડ્રેનેજવાળી જમીન. પૂરતો સૂર્યપ્રકાશથી અર્ધછાંયો. ઝડપથી ફેલાઈ શકે છે.',
+    'tree.bamboo.idealRegion': 'ઉષ્ણકટિબંધીય અને સમશીતોષ્ણ વિસ્તારો',
+    'tree.bael.name': 'બિલ્વ / બેલ',
+    'tree.bael.description': 'ભગવાન શિવને અર્પિત પવિત્ર વૃક્ષ. તેના ત્રિપત્ર પાન ચેતનાના ત્રણ સ્વરૂપ દર્શાવે છે.',
+    'tree.bael.careTips': 'સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. પથ્થરાળી જમીનમાં પણ ઉગે છે.',
+    'tree.bael.idealRegion': 'ગુજરાતના શુષ્ક જંગલો',
+    'tree.karanj.name': 'કરંજ',
+    'tree.karanj.description': 'કરંજ—તેલસમૃદ્ધ બીજ ધરાવતું વૃક્ષ. જ્ઞાન અને ઉપયોગિતાનું પ્રતીક.',
+    'tree.karanj.careTips': 'ખૂબ અનુકૂળનક્ષમ. સુકા અને ખારા પરિસ્થિતિ સહન કરે છે. પૂરતો સૂર્યપ્રકાશ.',
+    'tree.karanj.idealRegion': 'તટિય અને ઉષ્ણકટિબંધીય ગુજરાત',
+    'tree.desi_babool.name': 'દેશી બબૂલ',
+    'tree.desi_babool.description': 'બહુઉપયોગી દેશી બબૂલ. વ્યવહારુ બુદ્ધિનું પ્રતીક.',
+    'tree.desi_babool.careTips': 'સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. વિવિધ જમીનમાં વધે છે.',
+    'tree.desi_babool.idealRegion': 'ગુજરાતના શુષ્ક પ્રદેશો',
+
+    // KARKA (Cancer)
+    'tree.kadamba.name': 'કદંબ',
+    'tree.kadamba.description': 'ભગવાન કૃષ્ણ અને વરસાદ સાથે જોડાયેલું વૃક્ષ. સુગંધિત ફૂલો ચંદ્રની જળપ્રકૃતિ દર્શાવે છે.',
+    'tree.kadamba.careTips': 'ભીની જમીન. પૂરતો સૂર્યપ્રકાશ. ઝડપી વૃદ્ધિ.',
+    'tree.kadamba.idealRegion': 'ઉષ્ણકટિબંધીય ભીના જંગલો',
+    'tree.arjun.name': 'અર્જુન',
+    'tree.arjun.description': 'મહાયોધ્ધા અર્જુનના નામ પરથી. તેની છાલ હૃદય માટે પ્રસિદ્ધ ઔષધિ—પોષક સ્વભાવનું.',
+    'tree.arjun.careTips': 'પાણીના સ્ત્રોત નજીક વધે છે. પૂરતો સૂર્યપ્રકાશ. પાણી ભરાવ સહન કરે છે.',
+    'tree.arjun.idealRegion': 'ગુજરાતની નદી કિનારીઓ',
+    'tree.coconut.name': 'નાળિયેર',
+    'tree.coconut.description': 'જીવન વૃક્ષ—આહાર, પાણી અને તેલ આપે છે; કર્ક રાશિ જેવી પોષક પ્રકૃતિ.',
+    'tree.coconut.careTips': 'પૂરતો સૂર્યપ્રકાશ. રેતીલી જમીન. નિયમિત પાણી. ખારાશ સહન કરે છે.',
+    'tree.coconut.idealRegion': 'તટિય ગુજરાત',
+    'tree.tad_palm.name': 'તાડ',
+    'tree.tad_palm.description': 'તાડનું વૃક્ષ—નીરા અને તાડી આપે છે. સમુદાયોને પોષણ આપતું વૃક્ષ.',
+    'tree.tad_palm.careTips': 'પૂરતો સૂર્યપ્રકાશ. સ્થાપિત થયા પછી સુકાસહનશીલ. રેતીલી જમીન યોગ્ય.',
+    'tree.tad_palm.idealRegion': 'તટિય અને અર્ધ-શુષ્ક ગુજરાત',
+    'tree.banana.name': 'કેળું',
+    'tree.banana.description': 'હિંદુ વિધિમાં પવિત્ર. તેનું દરેક અંગ ઉપયોગી—સંપૂર્ણ પોષક છોડ.',
+    'tree.banana.careTips': 'ભીની અને ઉપજાઉ જમીન. પૂરતો સૂર્યપ્રકાશ. નિયમિત ખાતર અને પાણી.',
+    'tree.banana.idealRegion': 'સમગ્ર ગુજરાતમાં',
+
+    // SIMHA (Leo)
+    'tree.peepal.name': 'પીપળ',
+    'tree.peepal.description': 'પવિત્ર અંજીર જેના નીચે બુદ્ધને જ્ઞાન પ્રાપ્ત થયું. આધ્યાત્મિક જાગૃતિનું રાજસી વૃક્ષ.',
+    'tree.peepal.careTips': 'પૂરતો સૂર્યપ્રકાશથી અર્ધછાંયો. નાના હોય ત્યારે નિયમિત પાણી. અત્યંત લાંબી આયુષ્ય.',
+    'tree.peepal.idealRegion': 'સમગ્ર ગુજરાતમાં',
+    'tree.arka_aak.name': 'આંકડો',
+    'tree.arka_aak.description': 'મુકુટ ફૂલ, ભગવાન શિવ અને સૂર્ય દેવને અર્પિત. તેના રાજસી જાંબલી ફૂલો સિંહની મહિમા સાથે સુસંગત.',
+    'tree.arka_aak.careTips': 'અત્યંત સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. નબળી જમીનમાં પણ ફલે છે.',
+    'tree.arka_aak.idealRegion': 'ગુજરાતના શુષ્ક પ્રદેશો',
+    'tree.rudraksha.name': 'રુદ્રાક્ષ',
+    'tree.rudraksha.description': 'પવિત્ર મણિ વૃક્ષ. તેના બીજ આધ્યાત્મિક શક્તિ અને સુરક્ષા માટે પહેરવામાં આવે છે.',
+    'tree.rudraksha.careTips': 'ભીની અને સારી ડ્રેનેજવાળી જમીન. અર્ધછાંયો. ભેજવાળી પરિસ્થિતિ ગમે છે.',
+    'tree.rudraksha.idealRegion': 'હિમાલયની તળેટી (ગુજરાતના બગીચામાં ઉગાડી શકાય છે)',
+
+    // KANYA (Virgo)
+    'tree.harad.name': 'હરડ',
+    'tree.harad.description': 'આયુર્વેદમાં "દવાઓનો રાજા". વિગત-ઉન્મુખ, આરોગ્ય-સચેત કન્યા માટે યોગ્ય.',
+    'tree.harad.careTips': 'ભીની જમીન. પૂરતો સૂર્યપ્રકાશથી અર્ધછાંયો. મધ્યમ સિંચન.',
+    'tree.harad.idealRegion': 'ગુજરાતના પર્ણપાતી જંગલો',
+    'tree.kachnar.name': 'કચનાર',
+    'tree.kachnar.description': 'સુંદર ફૂલો સાથે ઓર્કિડ વૃક્ષ. શુદ્ધતા અને ચોકસાઈનું પ્રતીક.',
+    'tree.kachnar.careTips': 'પૂરતો સૂર્યપ્રકાશ. મધ્યમ સિંચન. ફૂલ આવ્યા પછી છંટાઈ કરો.',
+    'tree.kachnar.idealRegion': 'સમગ્ર ગુજરાતમાં',
+
+    // TULA (Libra)
+    'tree.ashoka.name': 'અશોક',
+    'tree.ashoka.description': 'પ્રેમ અને સૌંદર્યનું વૃક્ષ. તેનું નામ "દુઃખ વગર" નો અર્થ કરે છે—તુલા જેવું સંતુલન.',
+    'tree.ashoka.careTips': 'અર્ધછાંયો ગમે છે. જમીનને સતત ભીની રાખો. ધીમી વૃદ્ધિ પણ પ્રતીક્ષા યોગ્ય.',
+    'tree.ashoka.idealRegion': 'ગુજરાતના ભીના જંગલો',
+    'tree.champa.name': 'ચંપો',
+    'tree.champa.description': 'તીવ્ર સુગંધવાળું ફ્રેંજીપાની. ભક્તિ અને સૌંદર્યનું પ્રતીક.',
+    'tree.champa.careTips': 'પૂરતો સૂર્યપ્રકાશ. પાણી આપવા વચ્ચે જમીનને સૂકવવા દો. તુષારથી બચાવો.',
+    'tree.champa.idealRegion': 'ઉષ્ણકટિબંધીય અને ઉપ-ઉષ્ણકટિબંધીય ગુજરાત',
+    'tree.parijat.name': 'પારિજાત / હરશિંગાર',
+    'tree.parijat.description': 'સ્વર્ગીય સુગંધવાળું રાત્રિનું જાસ્મિન. તેની નાજુક સુંદરતા શુક્ર-શાસિત તુલા સાથે સુસંગત.',
+    'tree.parijat.careTips': 'અર્ધછાંયો. નિયમિત પાણી. ફૂલ આવ્યા પછી છંટાઈ કરો.',
+    'tree.parijat.idealRegion': 'સમગ્ર ગુજરાતમાં',
+
+    // VRISHCHIKA (Scorpio)
+    'tree.ber_bordi.name': 'બોરડી',
+    'tree.ber_bordi.description': 'કાંટાળું બોરડી વૃક્ષ. તેના રક્ષણાત્મક કાંટા વૃશ્ચિકની રક્ષણાત્મક પ્રકૃતિ સાથે મેળ ખાય છે.',
+    'tree.ber_bordi.careTips': 'ખૂબ જ સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. ઓછી જાળવણી.',
+    'tree.ber_bordi.idealRegion': 'સમગ્ર ગુજરાતમાં',
+    'tree.nagkesar.name': 'નાગકેસર',
+    'tree.nagkesar.description': 'સુગંધિત ફૂલો સાથે સેલોન આયર્નવુડ. પરિવર્તન અને ઊંડાઈનું પ્રતીક.',
+    'tree.nagkesar.careTips': 'અર્ધછાંયો. ભીની અને ઉપજાઉ જમીન. ધીમી વૃદ્ધિ.',
+    'tree.nagkesar.idealRegion': 'ભીના જંગલો (ગુજરાતના બગીચામાં ઉગાડી શકાય છે)',
+
+    // DHANU (Sagittarius)
+    'tree.gular_dhanu.name': 'ગૂલર',
+    'tree.gular_dhanu.description': 'સમૃદ્ધિનું પવિત્ર અંજીર. ગુરુની વિસ્તૃત ઊર્જા આ ઉદાર વૃક્ષમાંથી વહે છે.',
+    'tree.gular_dhanu.careTips': 'ભીની જમીન ગમે છે. પૂરતો સૂર્યપ્રકાશથી અર્ધછાંયો. નિયમિત પાણી.',
+    'tree.gular_dhanu.idealRegion': 'ગુજરાતના પાણીના સ્ત્રોતોના કિનારે',
+
+    // MAKARA (Capricorn)
+    'tree.tamarind.name': 'આંબલી',
+    'tree.tamarind.description': 'પ્રાચીન આંબલી, ધીમી વૃદ્ધિ પણ લાંબી આયુષ્ય. વૃક્ષ સ્વરૂપમાં શનિનું ધૈર્ય.',
+    'tree.tamarind.careTips': 'સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. સ્થાપિત થયા પછી ઓછી જાળવણી.',
+    'tree.tamarind.idealRegion': 'સમગ્ર ગુજરાતમાં',
+    'tree.vilayati_babool.name': 'વિલાયતી બબૂલ',
+    'tree.vilayati_babool.description': 'મજબૂત મેસ્ક્વાઇટ વૃક્ષ. અનુશાસન અને વિપરીત પરિસ્થિતિમાં જીવિત રહેવાનું પ્રતીક.',
+    'tree.vilayati_babool.careTips': 'અત્યંત સુકાસહનશીલ. પૂરતો સૂર્યપ્રકાશ. સૌથી નબળી જમીનમાં પણ ફલે છે.',
+    'tree.vilayati_babool.idealRegion': 'શુષ્ક ગુજરાત',
+
+    // KUMBHA (Aquarius)
+    'tree.fig_group.name': 'અંજીર',
+    'tree.fig_group.description': 'અંજીર વૃક્ષોનું સમુદાય. કુંભની માનવતાવાદી પ્રકૃતિ ઘણાને ખવડાવતા વૃક્ષોમાં પ્રતિબિંબિત થાય છે.',
+    'tree.fig_group.careTips': 'પ્રજાતિ અનુસાર બદલાય છે. સામાન્ય રીતે અનુકૂળનક્ષમ અને ઉગાડવામાં સરળ.',
+    'tree.fig_group.idealRegion': 'સમગ્ર ગુજરાતમાં',
+
+    // MEENA (Pisces)
+    'tree.kadamba_meen.name': 'કદંબ',
+    'tree.kadamba_meen.description': 'સ્વર્ગીય સુગંધવાળું વરસાદી વૃક્ષ. સ્વપ્નિલ મીન માટે ગુરુની આધ્યાત્મિક બુદ્ધિમત્તા.',
+    'tree.kadamba_meen.careTips': 'ભીની જમીન. પૂરતો સૂર્યપ્રકાશ. યોગ્ય પરિસ્થિતિમાં ઝડપી વૃદ્ધિ.',
+    'tree.kadamba_meen.idealRegion': 'ઉષ્ણકટિબંધીય ભીના જંગલો',
+
+    // QR Code
+    'qr.title': 'રાશિ વૃક્ષ ગાઇડ પરિણામ',
+    'qr.moonSign': 'ચંદ્ર રાશિ',
+    'qr.element': 'તત્વ',
+    'qr.rulingPlanet': 'સ્વામી ગ્રહ',
+    'qr.recommendedTrees': 'ભલામણ કરેલ પવિત્ર વૃક્ષો',
+    'qr.plantTree': 'વૃક્ષ વાવો, જીવન ઉછેરો!',
+
+    // Layout
+    'layout.title': 'રાશિ વૃક્ષ ગાઇડ',
+    'layout.home': 'હોમ',
+    'layout.footer': 'વૈદિક જ્યોતિષ પર આધારિત તમારા આકાશીય વૃક્ષ સાથીઓને શોધો',
+    'layout.footerNote': 'ચંદ્ર રાશિ લાહિરી અયનાંશનો ઉપયોગ કરીને ગણતરી કરવામાં આવી છે',
+
+    // FindRashi Additional
+    'findRashi.intro': 'તમારી ચંદ્ર રાશિ અને ભલામણ કરેલા વૃક્ષો શોધવા માટે તમારી જન્મ વિગતો દાખલ કરો.',
+
+    // Days of Week
+    'day.sunday': 'રવિવાર',
+    'day.monday': 'સોમવાર',
+    'day.tuesday': 'મંગળવાર',
+    'day.wednesday': 'બુધવાર',
+    'day.thursday': 'ગુરુવાર',
+    'day.friday': 'શુક્રવાર',
+    'day.saturday': 'શનિવાર',
+    'day.everyday': 'દરેક દિવસ',
+
+    // Colors
+    'color.red': 'લાલ',
+    'color.green': 'લીલો',
+    'color.yellow': 'પીળો',
+    'color.white': 'સફેદ',
+    'color.blue': 'નીલો',
+    'color.gold': 'સોનું',
+    'color.black': 'કાળો',
+
+    // Result Page Additional
+    'result.moon': 'ચંદ્ર',
+    'result.sidereal': 'સાયન',
+    'result.everydayLucky': 'દરેક દિવસ શુભ છે',
+    'result.unique': 'અનન્ય',
+    'result.special': 'ખાસ',
+
+    // Rashi Names
+    'rashi.MESHA.label': 'મેષ',
+    'rashi.MESHA.englishName': 'એરીઝ',
+    'rashi.VRISHABHA.label': 'વૃષભ',
+    'rashi.VRISHABHA.englishName': 'ટોરસ',
+    'rashi.MITHUNA.label': 'મિથુન',
+    'rashi.MITHUNA.englishName': 'જેમિની',
+    'rashi.KARKA.label': 'કર્ક',
+    'rashi.KARKA.englishName': 'કૅન્સર',
+    'rashi.SIMHA.label': 'સિંહ',
+    'rashi.SIMHA.englishName': 'લિઓ',
+    'rashi.KANYA.label': 'કન્યા',
+    'rashi.KANYA.englishName': 'વર્ગો',
+    'rashi.TULA.label': 'તુલા',
+    'rashi.TULA.englishName': 'લિબ્રા',
+    'rashi.VRISHCHIKA.label': 'વૃશ્ચિક',
+    'rashi.VRISHCHIKA.englishName': 'સ્કોર્પિયો',
+    'rashi.DHANU.label': 'ધનુ',
+    'rashi.DHANU.englishName': 'સેજિટેરિયસ',
+    'rashi.MAKARA.label': 'મકર',
+    'rashi.MAKARA.englishName': 'કૅપ્રિકોર્ન',
+    'rashi.KUMBHA.label': 'કુંભ',
+    'rashi.KUMBHA.englishName': 'એક્વેરિયસ',
+    'rashi.MEENA.label': 'મીન',
+    'rashi.MEENA.englishName': 'પાઈસિસ',
+
+    // Elements
+    'element.Fire': 'અગ્નિ',
+    'element.Earth': 'પૃથ્વી',
+    'element.Air': 'વાયુ',
+    'element.Water': 'જળ',
+
+    // Planets
+    'planet.Mars': 'મંગળ',
+    'planet.Venus': 'શુક્ર',
+    'planet.Mercury': 'બુધ',
+    'planet.Moon': 'ચંદ્ર',
+    'planet.Sun': 'સૂર્ય',
+    'planet.Jupiter': 'ગુરુ',
+    'planet.Saturn': 'શનિ',
   }
 };
 

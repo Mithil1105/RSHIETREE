@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { TreeDeciduous, ArrowLeft, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,6 +16,7 @@ const INACTIVITY_TIMEOUT = 90; // 1.5 minutes in seconds
 export function Layout({ children, showBack = false }: LayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useLanguage();
   const isHome = location.pathname === '/';
   const [timeLeft, setTimeLeft] = useState(INACTIVITY_TIMEOUT);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -96,7 +98,7 @@ export function Layout({ children, showBack = false }: LayoutProps) {
               <TreeDeciduous className="w-5 h-5 text-primary" />
             </div>
             <span className="font-display text-xl font-semibold text-foreground hidden sm:inline">
-              Rashi Tree Guide
+              {t('layout.title')}
             </span>
           </Link>
           
@@ -122,7 +124,7 @@ export function Layout({ children, showBack = false }: LayoutProps) {
               <Button variant="ghost" size="sm" asChild className="hidden sm:flex">
                 <Link to="/">
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Home
+                  {t('layout.home')}
                 </Link>
               </Button>
             )}
@@ -146,10 +148,10 @@ export function Layout({ children, showBack = false }: LayoutProps) {
       <footer className="border-t border-border/40 bg-card/30 mt-auto">
         <div className="container py-6 text-center text-sm text-muted-foreground">
           <p>
-            Discover your celestial tree companions based on Vedic astrology
+            {t('layout.footer')}
           </p>
           <p className="mt-2 text-xs">
-            Moon sign (Chandra Rashi) calculated using Lahiri Ayanamsa
+            {t('layout.footerNote')}
           </p>
         </div>
       </footer>

@@ -31,19 +31,24 @@ export default function Result() {
   const { rashi, trees, source, computeResult } = state;
 
   // Generate QR code text with Rashi and tree info
-  const qrText = `🌳 Rashi Tree Guide Result
+  const qrText = `🌳 ${t('qr.title')}
 
-Moon Sign: ${rashi.label} (${rashi.englishName})
-Element: ${rashi.element}
-Ruling Planet: ${rashi.ruling_planet}
+${t('qr.moonSign')}: ${t(`rashi.${rashi.key}.label`)} (${t(`rashi.${rashi.key}.englishName`)})
+${t('qr.element')}: ${t(`element.${rashi.element}`)}
+${t('qr.rulingPlanet')}: ${t(`planet.${rashi.ruling_planet}`)}
 
-Recommended Sacred Trees:
-${trees.map((t, i) => `${i + 1}. ${t.name} (${t.scientific_name})${t.isPrimary ? ' ⭐ Primary' : ''}`).join('\n')}
+${t('qr.recommendedTrees')}:
+${trees.map((tree, i) => `${i + 1}. ${t(`tree.${tree.id}.name`) || tree.name} (${tree.scientific_name})${tree.isPrimary ? ` ⭐ ${t('tree.primary')}` : ''}`).join('\n')}
 
-🌱 Plant a tree, nurture life!`;
+🌱 ${t('qr.plantTree')}`;
 
   const handleStartOver = () => {
     navigate('/');
+  };
+
+  const handleQRCodeClick = () => {
+    // Navigate directly to external URL in the same tab
+    window.location.href = 'https://forests.gujarat.gov.in/nursery-on-map.html';
   };
 
   return (
@@ -70,16 +75,16 @@ ${trees.map((t, i) => `${i + 1}. ${t.name} (${t.scientific_name})${t.isPrimary ?
             {t('result.rashiIs')}
           </p>
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-1">
-            {rashi.label}
+            {t(`rashi.${rashi.key}.label`)}
           </h1>
           <p className="text-sm text-muted-foreground mb-2">
-            {rashi.englishName} • {rashi.element}
+            {t(`rashi.${rashi.key}.englishName`)} • {t(`element.${rashi.element}`)}
           </p>
           
           <div className="flex items-center justify-center gap-2 flex-wrap">
             <Badge variant="outline" className="border-primary/30 text-primary text-xs">
               <Moon className="w-3 h-3 mr-1" />
-              {rashi.ruling_planet}
+              {t(`planet.${rashi.ruling_planet}`)}
             </Badge>
             {source === 'computed' && computeResult && (
               <Badge variant="outline" className="border-earth/30 text-earth text-xs">
@@ -106,7 +111,7 @@ ${trees.map((t, i) => `${i + 1}. ${t.name} (${t.scientific_name})${t.isPrimary ?
                     <span>{computeResult.location.timezone}</span>
                   </div>
                   <div className="text-muted-foreground">
-                    Moon: {computeResult.sidereal_longitude.toFixed(2)}° sidereal
+                    {t('result.moon')}: {computeResult.sidereal_longitude.toFixed(2)}° {t('result.sidereal')}
                   </div>
                 </div>
               </CardContent>
@@ -141,7 +146,11 @@ ${trees.map((t, i) => `${i + 1}. ${t.name} (${t.scientific_name})${t.isPrimary ?
         >
           <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
             {/* Results QR */}
-            <Card variant="nature">
+            <Card 
+              variant="nature" 
+              className="cursor-pointer hover:shadow-lg transition-shadow touch-manipulation"
+              onClick={handleQRCodeClick}
+            >
               <CardContent className="p-4 flex flex-col items-center">
                 <h3 className="font-display text-sm font-semibold text-foreground mb-2 text-center">
                   {t('result.scanQR')}
@@ -160,7 +169,11 @@ ${trees.map((t, i) => `${i + 1}. ${t.name} (${t.scientific_name})${t.isPrimary ?
             </Card>
 
             {/* Nursery QR */}
-            <Card variant="nature" className="bg-gradient-to-br from-earth/5 to-primary/5 border-earth/20">
+            <Card 
+              variant="nature" 
+              className="bg-gradient-to-br from-earth/5 to-primary/5 border-earth/20 cursor-pointer hover:shadow-lg transition-shadow touch-manipulation"
+              onClick={handleQRCodeClick}
+            >
               <CardContent className="p-4 flex flex-col items-center">
                 <div className="flex items-center gap-2 mb-2">
                   <TreeDeciduous className="w-4 h-4 text-earth" />
@@ -170,7 +183,7 @@ ${trees.map((t, i) => `${i + 1}. ${t.name} (${t.scientific_name})${t.isPrimary ?
                 </div>
                 <img 
                   src={nurseryQR} 
-                  alt="Forest Department QR Code" 
+                  alt={t('result.nurseryQR')} 
                   className="w-[100px] h-[100px] rounded-lg shadow-card"
                 />
                 <p className="text-xs text-muted-foreground text-center mt-2">

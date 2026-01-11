@@ -10,6 +10,7 @@ import KnowRashi from "./pages/KnowRashi";
 import FindRashi from "./pages/FindRashi";
 import Result from "./pages/Result";
 import NotFound from "./pages/NotFound";
+import NurseryRedirect from "./pages/NurseryRedirect";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ function App() {
               <Route path="/know-rashi" element={<KnowRashi />} />
               <Route path="/find-rashi" element={<FindRashi />} />
               <Route path="/result" element={<Result />} />
+              <Route path="/nursery-redirect" element={<NurseryRedirect />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

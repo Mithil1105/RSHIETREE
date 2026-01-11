@@ -307,7 +307,7 @@ export default function FindRashi() {
         }
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to compute rashi');
+      setError(err instanceof Error ? err.message : t('error.failedComputeRashi'));
     } finally {
       setIsLoading(false);
     }
@@ -316,7 +316,7 @@ export default function FindRashi() {
   if (isLoading) {
     return (
       <Layout showBack>
-        <LoadingState message="Calculating your Moon sign..." />
+        <LoadingState message={t('loading.calculating')} />
       </Layout>
     );
   }
@@ -342,10 +342,10 @@ export default function FindRashi() {
           className="text-center mb-8"
         >
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-3">
-            Calculate Your Rashi
+            {t('findRashi.title')}
           </h1>
           <p className="text-muted-foreground">
-            Enter your birth details to discover your Moon sign and recommended trees.
+            {t('findRashi.intro')}
           </p>
         </motion.div>
 

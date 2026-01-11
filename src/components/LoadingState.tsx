@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
 import { TreeDeciduous } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface LoadingStateProps {
   message?: string;
 }
 
-export function LoadingState({ message = "Discovering your trees..." }: LoadingStateProps) {
+export function LoadingState({ message }: LoadingStateProps) {
+  const { t } = useLanguage();
+  const displayMessage = message || t('loading.discovering');
   return (
     <div className="flex flex-col items-center justify-center py-20">
       <motion.div
@@ -33,7 +36,7 @@ export function LoadingState({ message = "Discovering your trees..." }: LoadingS
         transition={{ delay: 0.3 }}
         className="mt-6 text-lg text-muted-foreground font-display"
       >
-        {message}
+        {displayMessage}
       </motion.p>
       <div className="flex gap-1 mt-4">
         {[0, 1, 2].map((i) => (

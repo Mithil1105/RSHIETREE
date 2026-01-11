@@ -92,6 +92,24 @@ export function RashiPreviewModal({ rashi, isOpen, onClose, onConfirm, isLoading
     mantra: "Om Namah Shivaya"
   };
 
+  // Translate lucky info (day, color, number)
+  const translateLuckyInfo = (lucky: string): string => {
+    if (lucky === "Everyday is lucky") {
+      return t('result.everydayLucky');
+    }
+    
+    const parts = lucky.split(', ');
+    if (parts.length === 3) {
+      const [day, color, number] = parts;
+      const dayKey = `day.${day.toLowerCase()}`;
+      const colorKey = `color.${color.toLowerCase()}`;
+      const translatedDay = t(dayKey) !== dayKey ? t(dayKey) : day;
+      const translatedColor = t(colorKey) !== colorKey ? t(colorKey) : color;
+      return `${translatedDay}, ${translatedColor}, ${number}`;
+    }
+    return lucky;
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-lg p-0 overflow-hidden border-2" style={{ borderColor: `${rashi.color}40` }}>
@@ -136,10 +154,10 @@ export function RashiPreviewModal({ rashi, isOpen, onClose, onConfirm, isLoading
               </div>
               <div>
                 <h2 className="font-display text-2xl font-bold text-foreground">
-                  {rashi.label}
+                  {t(`rashi.${rashi.key}.label`)}
                 </h2>
                 <p className="text-muted-foreground font-normal text-base">
-                  {rashi.englishName}
+                  {t(`rashi.${rashi.key}.englishName`)}
                 </p>
               </div>
             </DialogTitle>
@@ -152,14 +170,14 @@ export function RashiPreviewModal({ rashi, isOpen, onClose, onConfirm, isLoading
               style={{ backgroundColor: `${rashi.color}10` }}
             >
               <p className="text-xs text-muted-foreground mb-1">{t('modal.element')}</p>
-              <p className="font-semibold text-foreground">{rashi.element}</p>
+              <p className="font-semibold text-foreground">{t(`element.${rashi.element}`)}</p>
             </div>
             <div 
               className="p-3 rounded-lg"
               style={{ backgroundColor: `${rashi.color}10` }}
             >
               <p className="text-xs text-muted-foreground mb-1">{t('modal.rulingPlanet')}</p>
-              <p className="font-semibold text-foreground">{rashi.ruling_planet}</p>
+              <p className="font-semibold text-foreground">{t(`planet.${rashi.ruling_planet}`)}</p>
             </div>
           </div>
 
@@ -167,18 +185,21 @@ export function RashiPreviewModal({ rashi, isOpen, onClose, onConfirm, isLoading
           <div className="mb-6">
             <p className="text-sm text-muted-foreground mb-2">{t('modal.keyTraits')}</p>
             <div className="flex flex-wrap gap-2">
-              {details.traits.map((trait) => (
-                <span 
-                  key={trait}
-                  className="px-3 py-1 rounded-full text-sm font-medium"
-                  style={{ 
-                    backgroundColor: `${rashi.color}20`,
-                    color: rashi.color
-                  }}
-                >
-                  {t(`trait.${trait}`)}
-                </span>
-              ))}
+              {details.traits.map((trait) => {
+                const traitKey = trait === "Unique" ? "result.unique" : trait === "Special" ? "result.special" : `trait.${trait}`;
+                return (
+                  <span 
+                    key={trait}
+                    className="px-3 py-1 rounded-full text-sm font-medium"
+                    style={{ 
+                      backgroundColor: `${rashi.color}20`,
+                      color: rashi.color
+                    }}
+                  >
+                    {t(traitKey)}
+                  </span>
+                );
+              })}
             </div>
           </div>
 
@@ -188,7 +209,7 @@ export function RashiPreviewModal({ rashi, isOpen, onClose, onConfirm, isLoading
             style={{ backgroundColor: `${rashi.color}10` }}
           >
             <p className="text-xs text-muted-foreground mb-1">{t('modal.luckyInfo')}</p>
-            <p className="font-medium text-foreground">{details.lucky}</p>
+            <p className="font-medium text-foreground">{translateLuckyInfo(details.lucky)}</p>
           </div>
 
           {/* CTA Button */}

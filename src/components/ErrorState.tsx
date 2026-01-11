@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ErrorStateProps {
   title?: string;
@@ -9,10 +10,12 @@ interface ErrorStateProps {
 }
 
 export function ErrorState({ 
-  title = "Something went wrong", 
+  title, 
   message, 
   onRetry 
 }: ErrorStateProps) {
+  const { t } = useLanguage();
+  const displayTitle = title || t('error.title');
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -23,7 +26,7 @@ export function ErrorState({
         <AlertTriangle className="w-8 h-8 text-destructive" />
       </div>
       <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-        {title}
+        {displayTitle}
       </h3>
       <p className="text-muted-foreground max-w-md mb-6">
         {message}
@@ -31,7 +34,7 @@ export function ErrorState({
       {onRetry && (
         <Button variant="outline" onClick={onRetry}>
           <RefreshCw className="w-4 h-4 mr-2" />
-          Try Again
+          {t('error.tryAgain')}
         </Button>
       )}
     </motion.div>

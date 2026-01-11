@@ -36,7 +36,7 @@ export default function KnowRashi() {
         } 
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch trees');
+      setError(err instanceof Error ? err.message : t('error.failedFetchTrees'));
       setSelectedRashi(null);
     } finally {
       setIsLoading(false);

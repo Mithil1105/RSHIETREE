@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Rashi } from '@/lib/types';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface RashiCardProps {
   rashi: Rashi;
@@ -9,6 +10,7 @@ interface RashiCardProps {
 }
 
 export function RashiCard({ rashi, onClick, index }: RashiCardProps) {
+  const { t } = useLanguage();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -25,7 +27,7 @@ export function RashiCard({ rashi, onClick, index }: RashiCardProps) {
           <div className="relative h-28 sm:h-32 overflow-hidden">
             <img 
               src={rashi.image} 
-              alt={`${rashi.label} background`}
+              alt={`${t(`rashi.${rashi.key}.label`)} background`}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div 
@@ -62,10 +64,10 @@ export function RashiCard({ rashi, onClick, index }: RashiCardProps) {
           </div>
           
           <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-1">
-            {rashi.label}
+            {t(`rashi.${rashi.key}.label`)}
           </h3>
           <p className="text-sm text-muted-foreground mb-2">
-            {rashi.englishName}
+            {t(`rashi.${rashi.key}.englishName`)}
           </p>
           
           <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
@@ -74,10 +76,10 @@ export function RashiCard({ rashi, onClick, index }: RashiCardProps) {
                 className="w-2 h-2 rounded-full"
                 style={{ backgroundColor: rashi.color }}
               />
-              <span>{rashi.element}</span>
+              <span>{t(`element.${rashi.element}`)}</span>
             </div>
             <span className="text-muted-foreground/40">•</span>
-            <span>{rashi.ruling_planet}</span>
+            <span>{t(`planet.${rashi.ruling_planet}`)}</span>
           </div>
         </div>
       </Card>
